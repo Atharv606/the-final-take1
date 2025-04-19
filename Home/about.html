@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - The Final Take</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎬 The Final Take</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="about.html">About</a>
+            <a href="top10.html">Top 10</a>
+            <span id="user-display"></span>
+            <a href="auth.html?mode=signin" id="signin-link">Sign In</a>
+            <a href="auth.html?mode=login" id="login-link">Log In</a>
+            <a href="#" id="logout-link" style="display: none;">Log Out</a>
+        </nav>
+    </header>
+    <div id="about-container">
+        <h2>About The Final Take</h2>
+        <p>The Final Take is your go-to movie database application powered by the OMDB API. Browse trending movies, search for your favorites, explore by category, and save movies to your watchlist for later viewing.</p>
+        <p>Developed with passion for cinema by our group. Have feedback or suggestions? Contact us at <a href="mailto:atharv.deshmukh24@pccoepune.org">atharv.deshmukh24@pccoepune.org</a>.</p>
+    </div>
+    <script>
+        function updateAuthLinks() {
+            const user = localStorage.getItem('currentUser');
+            const signinLink = document.getElementById('signin-link');
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            const userDisplay = document.getElementById('user-display');
+
+            if (user) {
+                signinLink.style.display = 'none';
+                loginLink.style.display = 'none';
+                logoutLink.style.display = 'inline';
+                userDisplay.textContent = `Welcome, ${user}`;
+                logoutLink.onclick = () => {
+                    localStorage.removeItem('currentUser');
+                    window.location.reload();
+                };
+            }
+        }
+        updateAuthLinks();
+    </script>
+</body>
+</html>

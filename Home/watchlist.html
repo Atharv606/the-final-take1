@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist - The Final Take</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie-card.css">
+    <link rel="stylesheet" href="watchlist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎬 The Final Take</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="about.html">About</a>
+            <a href="top10.html">Top 10</a>
+            <span id="user-display"></span>
+            <a href="auth.html?mode=signin" id="signin-link">Sign In</a>
+            <a href="auth.html?mode=login" id="login-link">Log In</a>
+            <a href="#" id="logout-link" style="display: none;">Log Out</a>
+        </nav>
+    </header>
+    <div id="watchlist-container">
+        <h2>My Watchlist</h2>
+        <div id="watchlist-movies"></div>
+    </div>
+    <div id="error-toast"></div>
+    <script src="watchlist.js"></script>
+</body>
+</html>

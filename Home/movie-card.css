@@ -1,0 +1,136 @@
+.movie-card {
+    width: 200px;
+    height: 350px;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.movie-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.movie-card:hover .movie-inner {
+    transform: rotateY(180deg);
+}
+
+.movie-front, .movie-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.movie-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-back {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    transform: rotateY(180deg);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.movie-back h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.movie-back p {
+    font-size: 11px;
+    margin: 3px 0;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.movie-back p.rating {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color: #000;
+}
+
+.movie-back p.plot {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.trailer-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.trailer-button:hover {
+    background-color: #b20710;
+}
+
+.watchlist-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.watchlist-button:hover {
+    background-color: #b20710;
+}
+
+.remove-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.remove-button:hover {
+    background-color: #b20710;
+}
+
+@media (max-width: 600px) {
+    .movie-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+}

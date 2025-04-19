@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - The Final Take</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie-card.css">
+    <link rel="stylesheet" href="categories.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎬 The Final Take</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="about.html">About</a>
+            <a href="top10.html">Top 10</a>
+            <span id="user-display"></span>
+            <a href="auth.html?mode=signin" id="signin-link">Sign In</a>
+            <a href="auth.html?mode=login" id="login-link">Log In</a>
+            <a href="#" id="logout-link" style="display: none;">Log Out</a>
+        </nav>
+    </header>
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <div id="category-container">
+        <h2 id="category-name">Selected Category:</h2>
+        <div id="category-movie-container"></div>
+    </div>
+    <div id="error-toast"></div>
+    <script src="categories.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Final Take - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie-card.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎬 The Final Take</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="about.html">About</a>
+            <a href="top10.html">Top 10</a>
+            <a href="auth.html?mode=signin" id="signin-link">Sign In</a>
+            <a href="auth.html?mode=login" id="login-link">Log In</a>
+            <a href="#" id="logout-link" style="display: none;">Log Out</a>
+        </nav>
+        <div id="category-dropdown">
+            <label for="category">Categories: </label>
+            <select id="category" onchange="window.location.href=this.value;">
+                <option value="index.html">Select Category</option>
+                <option value="categories.html?category=Action">Action</option>
+                <option value="categories.html?category=Comedy">Comedy</option>
+                <option value="categories.html?category=Drama">Drama</option>
+                <option value="categories.html?category=Thriller">Thriller</option>
+                <option value="categories.html?category=Horror">Horror</option>
+                <option value="categories.html?category=Romance">Romance</option>
+            </select>
+        </div>
+    </header>
+    
+    <div id="search-container">
+        <input type="text" id="search-box" placeholder="Search for a movie...">
+        <button id="search-button">🔍 Search</button>
+    </div>
+
+    <div id="movie-container"></div>
+    <div id="error-toast"></div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Follow The Final Take</h3>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Get the Final Take App</h3>
+                <p>For Android and iOS</p>
+                <a href="https://play.google.com" target="_blank">Google Play</a>
+                <a href="https://www.apple.com/app-store" target="_blank">App Store</a>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="help.html">Help</a>
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Conditions of Use</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023-2025 by The Final Take. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

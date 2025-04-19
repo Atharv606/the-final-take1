@@ -1,0 +1,34 @@
+#about-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1f1f1f;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#about-container h2 {
+    color: #e50914;
+    text-align: center;
+}
+
+#about-container p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#about-container a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+#about-container a:hover {
+    color: #b20710;
+}
+
+@media (max-width: 600px) {
+    #about-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}

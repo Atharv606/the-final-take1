@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 - The Final Take</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie-card.css">
+    <link rel="stylesheet" href="top10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎬 The Final Take</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="watchlist.html">Watchlist</a>
+            <a href="about.html">About</a>
+            <a href="top10.html">Top 10</a>
+            <span id="user-display"></span>
+            <a href="auth.html?mode=signin" id="signin-link">Sign In</a>
+            <a href="auth.html?mode=login" id="login-link">Log In</a>
+            <a href="#" id="logout-link" style="display: none;">Log Out</a>
+        </nav>
+    </header>
+    <div id="top10-container">
+        <h2>Top 10 Movies of All Time</h2>
+        <div id="top10-movies"></div>
+        <h2>Top 10 TV Shows of All Time</h2>
+        <div id="top10-tvshows"></div>
+    </div>
+    <div id="error-toast"></div>
+    <script src="top10.js"></script>
+</body>
+</html>
